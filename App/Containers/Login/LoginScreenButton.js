@@ -1,7 +1,7 @@
 import React from 'react'
 import { View, Modal } from 'react-native'
-import DebugConfig from '../Config/DebugConfig'
-import RoundedButton from '../Components/RoundedButton'
+import DebugConfig from '../../Config/DebugConfig'
+import RoundedButton from '../../Components/RoundedButton'
 
 import LoginScreen from './LoginScreen';
 

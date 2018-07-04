@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { ScrollView, Text, Image, View } from 'react-native'
 import DevscreensButton from '../../ignite/DevScreens/DevscreensButton.js'
-import LoginScreenButton from './LoginScreenButton';
+import LoginScreenButton from './Login/LoginScreenButton';
 
 import { Images } from '../Themes'
 
@@ -21,10 +21,9 @@ export default class LaunchScreen extends Component {
           <View style={styles.section} >
             <Image source={Images.ready} />
             <Text style={styles.sectionText}>
-              This probably isn't what your app is going to look like. Unless your designer handed you this screen and, in that case, congrats! You're ready to ship. For everyone else, this is where you'll see a live preview of your fully functioning app using Ignite. This is so awesome!
+              Welcome to your app
             </Text>
           </View>
-
           <LoginScreenButton />
           <DevscreensButton />
         </ScrollView>
