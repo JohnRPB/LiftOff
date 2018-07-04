@@ -1,18 +1,21 @@
 import { call, put } from 'redux-saga/effects'
 import { path } from 'ramda'
-import GithubActions from '../Redux/GithubRedux'
+import LoginActions from '../Redux/LoginRedux'
 
-export function * getUserAvatar (api, action) {
-  const { username } = action
+export function * loginUser (api, action) {
+  const { username, password } = action 
   // make the call to the api
-  const response = yield call(api.getUser, username)
+  const response = yield call(api.loginUser, username, password)
+  //window.alert(`Here is the action: ${JSON.stringify(action, null, 2)}`);
 
   if (response.ok) {
-    const firstUser = path(['data', 'items'], response)[0]
-    const avatar = firstUser.avatar_url
+    const profile = path(['data', 'profile'], response);
+  //window.alert(`Profile: ${JSON.stringify(profile, null, 2)}`);
+
     // do data conversion here if needed
-    yield put(GithubActions.userSuccess(avatar))
+    yield put(LoginActions.loginSuccess(profile))
   } else {
-    yield put(GithubActions.userFailure())
+    yield put(LoginActions.loginFailure())
+    // window.alert(`Login unsuccessful`);
   }
 }

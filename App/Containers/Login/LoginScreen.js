@@ -3,11 +3,29 @@ import { ScrollView, Text, TextInput, Image, View, TouchableOpacity } from 'reac
 import { Images } from '../../../ignite/DevScreens/DevTheme'
 import { StackNavigator } from 'react-navigation'
 import FullButton from '../../Components/FullButton';
+import { connect } from 'react-redux';
+
+/* LOGIN ACTION */
+import loginActions from '../../Redux/LoginRedux';
 
 // Styles
 import styles from '../../../ignite/DevScreens/Styles/PresentationScreenStyles'
 
-export default class LoginScreen extends React.Component {
+class LoginScreen extends React.Component {
+
+  constructor (props) {
+    super(props)
+    this.state = {
+      username: "",
+      password: ""
+    }
+  }
+
+  onChangeText(text, inputName) {
+    this.setState({
+      [inputName]: text
+    })
+  }
 
   render () {
     return (
@@ -27,7 +45,7 @@ export default class LoginScreen extends React.Component {
           </View>
 
           <Text style={styles.sectionText}>
-            Please Log in
+            Civlity Project
           </Text>
       
           <View style={{paddingLeft: 40, paddingRight: 40, paddingBottom: 20}}>
@@ -37,6 +55,7 @@ export default class LoginScreen extends React.Component {
             <TextInput
               underlineColorAndroid="white"
               placeholder="JohnSmith"
+              onChangeText={(text) => { this.onChangeText(text, "username")} }
             />
             <Text style={{color:"white"}}>
               Password
@@ -45,10 +64,16 @@ export default class LoginScreen extends React.Component {
               style={{paddingBottom: 20}}
               underlineColorAndroid="white"
               placeholder="password"
+              onChangeText={(text) => this.onChangeText(text, "password")}
             />
             <Text>{'\n'}</Text>
-            <FullButton text="Log in!" />
-
+            <FullButton 
+              text="Log in!" 
+              onPress={() => {
+                  this.props.loginUser(this.state.username, this.state.password)
+                }
+              }
+            />
           </View>
         </ScrollView>
       </View>
@@ -56,3 +81,11 @@ export default class LoginScreen extends React.Component {
   }
 }
 
+// wraps dispatch to create nicer functions to call within our component
+const mapDispatchToProps = (dispatch) => ({
+  loginUser: (username, password) => {
+    dispatch(loginActions.loginRequest(username, password)) 
+  }
+})
+
+export default connect(null, mapDispatchToProps)(LoginScreen)

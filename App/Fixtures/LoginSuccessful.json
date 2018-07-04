@@ -1,5 +1,8 @@
 {
   "id": 21, 
   "message": "Login Successful",
-  "token": "dsadl8493jdsh34kjwsd52"
+  "profile": {
+    "username":"John",
+    "token": "dsadl8493jdsh34kjwsd52"
+  }
 }
