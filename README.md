@@ -14,7 +14,7 @@
 
 ## :arrow_forward: How to Run App
 
-##### [NOTE (from the author): run `react-native start` in a separate terminal first, and leave it running]
+##### [NOTE (from the author): run `react-native start` in a separate terminal first, inside the project root, and leave it running]
 
 1. cd to the repo
 2. Run Build for either OS
