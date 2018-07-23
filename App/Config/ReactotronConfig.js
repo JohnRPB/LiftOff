@@ -7,7 +7,11 @@ import sagaPlugin from 'reactotron-redux-saga'
 if (Config.useReactotron) {
   // https://github.com/infinitered/reactotron for more options!
   Reactotron
-    .configure({ name: 'Ignite App' })
+    .configure({ 
+      name: "Demo app",
+      host: '172.20.32.65', // office subnet ip addr; 192.168.1.65 (home subnet)
+      port: 9090
+    })
     .useReactNative()
     .use(reduxPlugin({ onRestore: Immutable }))
     .use(sagaPlugin())

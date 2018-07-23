@@ -7,6 +7,9 @@ import styles from './Styles/ComponentExamplesScreenStyles'
 // Examples Render Engine
 import ExamplesRegistry from '../../App/Services/ExamplesRegistry'
 
+// Testing something out
+import ConvoCard from '../../App/Components/Sandbox/ConvoCard';
+
 class ComponentExamplesScreen extends React.Component {
   renderAndroidWarning () {
     if (Platform.OS === 'android') {
@@ -21,6 +24,7 @@ class ComponentExamplesScreen extends React.Component {
   }
 
   render () {
+    alert(JSON.stringify(ExamplesRegistry.renderComponentExamples, null, 2));
     return (
       <View style={[styles.container, styles.mainContainer]}>
         <Image source={Images.background} style={styles.backgroundImage} resizeMode='stretch' />
