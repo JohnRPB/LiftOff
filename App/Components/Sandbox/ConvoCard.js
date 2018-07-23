@@ -9,7 +9,7 @@ import ExamplesRegistry from '../../Services/ExamplesRegistry'
 import RoundedButton from '../RoundedButton';
 
 // Import example image
-import { Images } from '../../Themes';
+import { Images } from '../../../ignite/DevScreens/DevTheme';
 
 export default class ConvoCard extends Component {
   static propTypes = {
@@ -26,11 +26,17 @@ export default class ConvoCard extends Component {
   render() {
     return (
       <View style={style.overall}>
-        <Image source={this.props.bannerImage} />
+        <Image style={style.banner} source={this.props.bannerImage} />
         {/*<ConvoBanner style={style.bannerImage}> 
           {this.props.bannerImage}
         <ConvoBanner />*/}
-        <View >
+        <View style={{
+          height: 300,
+          width: 270,
+          margin: 32,
+          flexDirection: 'column', 
+          justifyContent: 'space-around',
+        }}>
           <Text style={style.title}> 
             {this.props.title} 
           </Text>
@@ -44,8 +50,10 @@ export default class ConvoCard extends Component {
 
 let style = {
   overall: {
-    width: 334,
     height: 541,
+    width: 334,
+    flexDirection: 'column',
+    alignItems: 'center',
     borderRadius: 16.5,
     backgroundColor: "#ffffff",
     shadowColor: "rgba(0, 0, 0, 0.25)",
@@ -57,12 +65,15 @@ let style = {
     shadowOpacity: 1
   },
   banner: {
+    borderTopLeftRadius: 16.5,
+    borderTopRightRadius: 16.5,
+    borderColor:'black',
+    justifyContent: 'center',
+    alignSelf:'flex-start',
     width: 334,
     height: 161
   },
   title: {
-    width: 295,
-    height: 26,
     opacity: 0.75,
     fontFamily: "SourceSansPro",
     fontSize: 20.5,
@@ -72,8 +83,6 @@ let style = {
     color: "#000000"
   },
   convoSummary: {
-    width: 273,
-    height: 60,
     fontFamily: "SourceSansPro",
     fontSize: 16,
     fontWeight: "normal",
@@ -82,9 +91,9 @@ let style = {
     color: "rgba(0, 0, 0, 0.5)"
   },
   roundedButton: {
-    width: 270,
-    height: 44,
     borderRadius: 8.8,
+    borderTopWidth: 1,
+    borderBottomWidth: 1,
     backgroundColor: "#373737",
     shadowColor: "rgba(0, 0, 0, 0.05)",
     shadowOffset: {
@@ -100,12 +109,11 @@ let style = {
 /* istanbul ignore next */
 ExamplesRegistry.addComponentExample('Conversation Card', () =>
   <ConvoCard
-    bannerImage={Images.launch}
+    bannerImage={Images.civilityLogo}
     title='The Origins of Consciousness'
     summary='Lets talk about the scientic study of consciousness, where consciousness emerges in nature, and more.'
     date='Wed, 1/25,4-7pm'
     location='San Francisco'
-    knowledgeDomains='consciousness,psychology,psychedelics'
-    
+    knowledgeDomains={['consciousness','psychology','psychedelics']}
   />
 )
