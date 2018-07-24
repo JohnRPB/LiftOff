@@ -18,7 +18,7 @@ storiesOf('ConvoCard')
       <ConvoCard
         bannerImage={Images.samHarrisConvo}
         title='The Origins of Consciousness'
-        summary='Lets talk about the scientic study of consciousness, where consciousness emerges in nature, and more.'
+        summary='Lets talk about the scientic study of consciousness, where consciousness emerges in nature, and more...'
         date='Wed, 1/25,4-7pm'
         location='San Francisco'
         knowledgeDomains={['consciousness','psychology','psychedelics']}

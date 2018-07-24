@@ -30,18 +30,14 @@ export default class ConvoCard extends Component {
         {/*<ConvoBanner style={style.bannerImage}> 
           {this.props.bannerImage}
         <ConvoBanner />*/}
-        <View style={{
-          height: 300,
-          width: 270,
-          margin: 32,
-          flexDirection: 'column', 
-          justifyContent: 'space-around',
-        }}>
+        <View style={style.content}>
           <Text style={style.title}> 
             {this.props.title} 
           </Text>
+          <Text> with Sam Harris </Text>
+          <Text style={style.convoSummary}> Wen, 1/25, 4-7pm    San Francisco</Text>
           <Text style={style.convoSummary}> {this.props.summary} </Text> 
-          <RoundedButton style={style.roundedButton}> Join </RoundedButton>
+          <RoundedButton buttonStyle={style.roundedButton}> Request to join </RoundedButton>
         </View>
       </View>
     )
@@ -62,11 +58,17 @@ let style = {
       height: 0.5
     },
     shadowRadius: 2,
-    shadowOpacity: 1
+    shadowOpacity: 1,
+    overflow:'hidden'
+  },
+  content: {
+    height: 300,
+    width: 280,
+    margin: 32,
+    flexDirection: 'column', 
+    justifyContent: 'space-around',
   },
   banner: {
-    borderTopLeftRadius: 16.5,
-    borderTopRightRadius: 16.5,
     borderColor:'black',
     justifyContent: 'center',
     alignSelf:'flex-start',
@@ -76,7 +78,7 @@ let style = {
   title: {
     opacity: 0.75,
     fontFamily: "SourceSansPro",
-    fontSize: 20.5,
+    fontSize: 20,
     fontWeight: "bold",
     fontStyle: "normal",
     letterSpacing: -0.1,
