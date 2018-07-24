@@ -5,7 +5,7 @@ import ExamplesRegistry from '../../Services/ExamplesRegistry'
 
 // Import all the pieces
 // import ConvoBanner from './ConvoBanner';
-// import FadedSectionTitles from './FadedSectionTitle';
+import FadedSectionTitle from './FadedSectionTitle';
 import RoundedButton from '../RoundedButton';
 
 // Import example image
@@ -15,6 +15,7 @@ export default class ConvoCard extends Component {
   static propTypes = {
     anchorImage: PropTypes.object,
     anchorName: PropTypes.string,
+    headShot: PropTypes.number.isRequired,
     bannerImage: PropTypes.number.isRequired,
     title: PropTypes.string.isRequired,
     summary: PropTypes.string.isRequired,
@@ -34,9 +35,35 @@ export default class ConvoCard extends Component {
           <Text style={style.title}> 
             {this.props.title} 
           </Text>
-          <Text> with Sam Harris </Text>
-          <Text style={style.convoSummary}> Wen, 1/25, 4-7pm    San Francisco</Text>
-          <Text style={style.convoSummary}> {this.props.summary} </Text> 
+          <View style={{
+            flexDirection:'row',
+            justifyContent:'flex-start',
+            }} >
+            <Image source={this.props.headShot} style={style.headShot} />
+            <Text> with Sam Harris </Text>
+          </View>
+          <Text style={style.convoSummary}>{this.props.summary}</Text> 
+          <View style={{
+            height: 120,
+            flexDirection:'row', 
+            flexWrap:'wrap',
+            alignContent: 'stretch',
+            paddingTop: 10,
+            paddingBottom: 10,
+          }}>
+            <View style={style.smallSection}>
+              <FadedSectionTitle>WHEN</FadedSectionTitle>
+              <Text>{this.props.date}</Text>
+            </View>
+            <View style={style.smallSection}>
+              <FadedSectionTitle>WHERE</FadedSectionTitle>
+              <Text>{this.props.location}</Text>
+              </View>
+            <View style={style.smallSection}>
+              <FadedSectionTitle>KNOWLEDGE DOMAINS</FadedSectionTitle>
+              <Text>{this.props.knowledgeDomains.join(', ')}</Text>
+            </View>
+          </View>
           <RoundedButton buttonStyle={style.roundedButton}> Request to join </RoundedButton>
         </View>
       </View>
@@ -75,6 +102,12 @@ let style = {
     width: 334,
     height: 161
   },
+  headShot: {
+    borderRadius: 12.5,
+    marginRight: 5,
+    width: 25,
+    height: 25,
+  },
   title: {
     opacity: 0.75,
     fontFamily: "SourceSansPro",
@@ -92,10 +125,13 @@ let style = {
     letterSpacing: -0.23,
     color: "rgba(0, 0, 0, 0.5)"
   },
+  smallSection: {
+    paddingRight: 20
+  },
   roundedButton: {
     borderRadius: 8.8,
-    borderTopWidth: 1,
-    borderBottomWidth: 1,
+    width:270,
+    height:40,
     backgroundColor: "#373737",
     shadowColor: "rgba(0, 0, 0, 0.05)",
     shadowOffset: {
