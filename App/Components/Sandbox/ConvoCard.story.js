@@ -12,6 +12,12 @@ import RoundedButton from '../RoundedButton';
 // Import example image
 import { Images } from '../../Themes';
 
+console.log(" ----------------------------------------------------- ");
+console.log(JSON.stringify(Images, null, 2));
+console.log(JSON.stringify(Images.samHarris, null, 2));
+console.log(typeof Images.samHarris);
+console.log(" ----------------------------------------------------- ");
+  
 storiesOf('ConvoCard')
   .add('Default', () => (
     <View style={{backgroundColor: "#f2f2f2", padding:10}}>

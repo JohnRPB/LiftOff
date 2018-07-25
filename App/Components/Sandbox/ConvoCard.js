@@ -8,9 +8,6 @@ import ExamplesRegistry from '../../Services/ExamplesRegistry'
 import FadedSectionTitle from './FadedSectionTitle';
 import RoundedButton from '../RoundedButton';
 
-// Import example image
-import { Images } from '../../../ignite/DevScreens/DevTheme';
-
 export default class ConvoCard extends Component {
   static propTypes = {
     anchorImage: PropTypes.object,
@@ -27,10 +24,7 @@ export default class ConvoCard extends Component {
   render() {
     return (
       <View style={style.overall}>
-        <Image style={style.banner} source={this.props.bannerImage} />
-        {/*<ConvoBanner style={style.bannerImage}> 
-          {this.props.bannerImage}
-        <ConvoBanner />*/}
+        <Image source={this.props.bannerImage} style={style.banner} />
         <View style={style.content}>
           <Text style={style.title}> 
             {this.props.title} 
@@ -145,13 +139,13 @@ let style = {
 
 // Ignore in coverage report
 /* istanbul ignore next */
-ExamplesRegistry.addComponentExample('Conversation Card', () =>
-  <ConvoCard
-    bannerImage={Images.civilityLogo}
-    title='The Origins of Consciousness'
-    summary='Lets talk about the scientic study of consciousness, where consciousness emerges in nature, and more.'
-    date='Wed, 1/25,4-7pm'
-    location='San Francisco'
-    knowledgeDomains={['consciousness','psychology','psychedelics']}
-  />
-)
+//ExamplesRegistry.addComponentExample('Conversation Card', () =>
+  //<ConvoCard
+    //bannerImage={Images.civilityLogo}
+    //title='The Origins of Consciousness'
+    //summary='Lets talk about the scientic study of consciousness, where consciousness emerges in nature, and more.'
+    //date='Wed, 1/25,4-7pm'
+    //location='San Francisco'
+    //knowledgeDomains={['consciousness','psychology','psychedelics']}
+  ///>
+//)
