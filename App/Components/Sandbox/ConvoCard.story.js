@@ -13,6 +13,7 @@ import RoundedButton from '../RoundedButton';
 import { Images } from '../../Themes';
 
 console.log(" ----------------------------------------------------- ");
+console.log("require('../../Images/samHarris.jpg'): ", require('../../Images/samHarris.jpg'));
 console.log(JSON.stringify(Images, null, 2));
 console.log(JSON.stringify(Images.samHarris, null, 2));
 console.log(typeof Images.samHarris);

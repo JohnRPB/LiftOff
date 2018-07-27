@@ -22,6 +22,9 @@ export default class ConvoCard extends Component {
   }
 
   render() {
+    console.log("------------------- START this.props.bannerImage -------------------");
+    console.log(this.props.bannerImage);
+    console.log("-------------------- END this.props.bannerImage --------------------");
     return (
       <View style={style.overall}>
         <Image source={this.props.bannerImage} style={style.banner} />

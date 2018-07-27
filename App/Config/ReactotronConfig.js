@@ -9,7 +9,7 @@ if (Config.useReactotron) {
   Reactotron
     .configure({ 
       name: "Demo app",
-      host: '172.20.32.65', // office subnet ip addr; 192.168.1.65 (home subnet)
+      host: '127.0.0.1', // office subnet ip addr; 192.168.1.65 (home subnet)
       port: 9090
     })
     .useReactNative()
