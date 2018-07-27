@@ -63,6 +63,7 @@
     "ignite-ir-boilerplate": "^2.3.3",
     "ignite-standard": "^1.0.0",
     "jest": "^23.4.1",
+    "jest-transform-stub": "^1.0.0",
     "mockery": "^2.1.0",
     "react-dom": "16.3.0",
     "react-test-renderer": "16.3.1",
@@ -82,7 +83,7 @@
       "<rootDir>/Tests/Setup.js"
     ],
     "moduleNameMapper": {
-      "^.+\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "identity-obj-proxy"
+      "^.+\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "jest-transform-stub"
     },
     "setupFiles": [
       "<rootDir>/Tests/Setup"
