@@ -12,8 +12,8 @@ export default class ConvoCard extends Component {
   static propTypes = {
     anchorImage: PropTypes.object,
     anchorName: PropTypes.string,
-    headShot: PropTypes.number.isRequired,
-    bannerImage: PropTypes.number.isRequired,
+    headShot: PropTypes.object.isRequired,
+    bannerImage: PropTypes.object.isRequired,
     title: PropTypes.string.isRequired,
     summary: PropTypes.string.isRequired,
     date: PropTypes.string.isRequired,
@@ -29,8 +29,8 @@ export default class ConvoCard extends Component {
       <View style={style.overall}>
         <Image source={this.props.bannerImage} style={style.banner} />
         <View style={style.content}>
-          <Text style={style.title}> 
-            {this.props.title} 
+          <Text style={style.title}>
+            {this.props.title}
           </Text>
           <View style={{
             flexDirection:'row',
@@ -39,10 +39,10 @@ export default class ConvoCard extends Component {
             <Image source={this.props.headShot} style={style.headShot} />
             <Text> with Sam Harris </Text>
           </View>
-          <Text style={style.convoSummary}>{this.props.summary}</Text> 
+          <Text style={style.convoSummary}>{this.props.summary}</Text>
           <View style={{
             height: 120,
-            flexDirection:'row', 
+            flexDirection:'row',
             flexWrap:'wrap',
             alignContent: 'stretch',
             paddingTop: 10,
@@ -89,7 +89,7 @@ let style = {
     height: 300,
     width: 280,
     margin: 32,
-    flexDirection: 'column', 
+    flexDirection: 'column',
     justifyContent: 'space-around',
   },
   banner: {

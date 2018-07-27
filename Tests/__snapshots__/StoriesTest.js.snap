@@ -118,6 +118,11 @@ exports[`Storyshots ConvoCard Default 1`] = `
     }
   >
     <Image
+      source={
+        Object {
+          "process": [Function],
+        }
+      }
       style={
         Object {
           "alignSelf": "flex-start",
@@ -166,6 +171,11 @@ exports[`Storyshots ConvoCard Default 1`] = `
         }
       >
         <Image
+          source={
+            Object {
+              "process": [Function],
+            }
+          }
           style={
             Object {
               "borderRadius": 12.5,
@@ -389,6 +399,22 @@ exports[`Storyshots ConvoCard Lots of content 1`] = `
       }
     }
   >
+    <Image
+      source={
+        Object {
+          "process": [Function],
+        }
+      }
+      style={
+        Object {
+          "alignSelf": "flex-start",
+          "borderColor": "black",
+          "height": 161,
+          "justifyContent": "center",
+          "width": 334,
+        }
+      }
+    />
     <View
       style={
         Object {
@@ -426,6 +452,21 @@ exports[`Storyshots ConvoCard Lots of content 1`] = `
           }
         }
       >
+        <Image
+          source={
+            Object {
+              "process": [Function],
+            }
+          }
+          style={
+            Object {
+              "borderRadius": 12.5,
+              "height": 25,
+              "marginRight": 5,
+              "width": 25,
+            }
+          }
+        />
         <Text
           accessible={true}
           allowFontScaling={true}

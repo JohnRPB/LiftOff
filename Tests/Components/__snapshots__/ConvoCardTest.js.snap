@@ -1,0 +1,283 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ConvoCard component renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#f2f2f2",
+      "padding": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#ffffff",
+        "borderRadius": 16.5,
+        "flexDirection": "column",
+        "height": 541,
+        "overflow": "hidden",
+        "shadowColor": "rgba(0, 0, 0, 0.25)",
+        "shadowOffset": Object {
+          "height": 0.5,
+          "width": 0,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 2,
+        "width": 334,
+      }
+    }
+  >
+    <Image
+      source={
+        Object {
+          "process": [Function],
+        }
+      }
+      style={
+        Object {
+          "alignSelf": "flex-start",
+          "borderColor": "black",
+          "height": 161,
+          "justifyContent": "center",
+          "width": 334,
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "flexDirection": "column",
+          "height": 300,
+          "justifyContent": "space-around",
+          "margin": 32,
+          "width": 280,
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#000000",
+            "fontFamily": "SourceSansPro",
+            "fontSize": 20,
+            "fontStyle": "normal",
+            "fontWeight": "bold",
+            "letterSpacing": -0.1,
+            "opacity": 0.75,
+          }
+        }
+      >
+        The Origins of Consciousness
+      </Text>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "justifyContent": "flex-start",
+          }
+        }
+      >
+        <Image
+          source={
+            Object {
+              "process": [Function],
+            }
+          }
+          style={
+            Object {
+              "borderRadius": 12.5,
+              "height": 25,
+              "marginRight": 5,
+              "width": 25,
+            }
+          }
+        />
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+           with Sam Harris 
+        </Text>
+      </View>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "rgba(0, 0, 0, 0.5)",
+            "fontFamily": "SourceSansPro",
+            "fontSize": 16,
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+            "letterSpacing": -0.23,
+          }
+        }
+      >
+        Lets talk about the scientic study of consciousness, where consciousness emerges in nature, and more...
+      </Text>
+      <View
+        style={
+          Object {
+            "alignContent": "stretch",
+            "flexDirection": "row",
+            "flexWrap": "wrap",
+            "height": 120,
+            "paddingBottom": 10,
+            "paddingTop": 10,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "paddingRight": 20,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#000000",
+                "fontFamily": "SourceSansPro",
+                "fontSize": 12.5,
+                "fontStyle": "normal",
+                "fontWeight": "bold",
+                "letterSpacing": 0.34,
+                "opacity": 0.15,
+              }
+            }
+          >
+            WHEN
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+          >
+            Wed, 1/25, 4-7pm
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "paddingRight": 20,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#000000",
+                "fontFamily": "SourceSansPro",
+                "fontSize": 12.5,
+                "fontStyle": "normal",
+                "fontWeight": "bold",
+                "letterSpacing": 0.34,
+                "opacity": 0.15,
+              }
+            }
+          >
+            WHERE
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+          >
+            San Francisco
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "paddingRight": 20,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#000000",
+                "fontFamily": "SourceSansPro",
+                "fontSize": 12.5,
+                "fontStyle": "normal",
+                "fontWeight": "bold",
+                "letterSpacing": 0.34,
+                "opacity": 0.15,
+              }
+            }
+          >
+            KNOWLEDGE DOMAINS
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+          >
+            consciousness, psychology, psychedelics
+          </Text>
+        </View>
+      </View>
+      <View
+        accessible={true}
+        isTVSelectable={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "backgroundColor": "#373737",
+            "borderRadius": 8.8,
+            "height": 40,
+            "opacity": 1,
+            "shadowColor": "rgba(0, 0, 0, 0.05)",
+            "shadowOffset": Object {
+              "height": 0,
+              "width": 0,
+            },
+            "shadowOpacity": 1,
+            "shadowRadius": 2,
+            "width": 270,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "white",
+              "fontSize": 14,
+              "fontWeight": "bold",
+              "marginVertical": 10,
+              "textAlign": "center",
+            }
+          }
+        >
+           Request to join 
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;
